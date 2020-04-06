@@ -95,4 +95,39 @@ abline(model, col= 'blue')
 
 ##Data : n optional data frame, list or environment (or object coercible by as.data.frame to a data frame) containing the variables in the model. If not found in data, the variables are taken from environment(formula), typically the environment from which lm is called.
 ##Subset : an optional vector specifying a subset of observations to be used in the fitting process.
+##Weights : an optional vector of weights to be used in the fitting process. Should be NULL or a numeric vector. If non-NULL, weighted least squares is used with weights weights (that is, minimizing sum(w*e^2)); otherwise ordinary least squares is used.
+##na.action :  function which indicates what should happen when the data contain NAs. The default is set by the na.action setting of options, and is na.fail if that is unset. The ‘factory-fresh’ default is na.omit. Another possible value is NULL, no action. Value na.exclude can be useful.
+##Model : the method to be used; for fitting, currently only method = "qr" is supported; method = "model.frame" returns the model frame (the same as with model = TRUE, see below). model, x, y, qr logicals. If TRUE the corresponding components of the fit (the model frame, the model matrix, the response, the QR decomposition) are returned.
+##Singular : .ok logical. If FALSE (the default in S but not in R) a singular fit is an error.
+##Contrasts : an optional list.
+##Offset :  this can be used to specify an a priori known component to be included in the linear predictor during fitting. This should be NULL or a numeric vector or matrix of extents matching those of the response. One or more offset terms can be included in the formula instead or as well, and if more than one are specified their sum is used.
+
+#abline(model, col= 'blue') 
+##This function adds one or more straight lines through the current plot
+##The tool aplot has a number of functions
+
+
+##Scatter plots show the relationship between two independent variables 
+##next section- data between dependent and independent variables
+
+pirateplot(formula = age ~ sword.type,
+           data = pirates,
+           main = "Pirateplot of ages by favorite sword")
+
+pirateplot(formula = height ~ sex,
+           data = pirates,
+           main = "Pirateplot of height by sex",
+           pal = "pony",
+           theme = 3)
+
+
+##The "pony" palette is a preloaded palette in the Yarrr package
+##contained in the piratepal() function. 
+##Investigation into origins of the palette from the package:
+
+piratepal(palette = "pony",
+          plot.result = TRUE,
+          trans = .1)
+
+##two-sample t-test
 

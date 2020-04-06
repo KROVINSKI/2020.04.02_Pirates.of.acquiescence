@@ -130,4 +130,77 @@ piratepal(palette = "pony",
           trans = .1)
 
 ##two-sample t-test
+## t-test , two different populations- how different are the means, are the means equal?
+
+
+# Age by headband t-test
+
+t.test(formula = age ~ headband,
+       data = pirates, 
+       alternative ='two.sided')
+
+##Results
+##t = 0.35135, df = 135.47, p-value = 0.7259
+#alternative hypothesis: true difference in means is not equal to 0
+#95 percent confidence interval:
+#  -1.030754  1.476126
+#sample estimates:
+#  mean in group no mean in group yes 
+#27.55752          27.33484 
+
+##the P value is too great to assume that there is a significant statistical relationship
+
+##significant correlation test
+
+cor.test(formula = ~ height + weight,
+         data = pirates)
+
+
+#data:  height and weight
+#t = 81.161, df = 998, p-value < 2.2e-16
+#alternative hypothesis: true correlation is not equal to 0
+#95 percent confidence interval:
+#  0.9232371 0.9396050
+#sample estimates:
+#  cor 
+# 0.9318938 
+
+## the P value is the smallest!
+##there is a significant (positive) relationship between a pirate’s height and weight.
+
+
+# *A*N*O*V*A*
+##one-way analysis of variance (ANOVA) is used to determine whether there are any statistically significant differences between the means of three or more independent (unrelated) groups. 
+##The one-way ANOVA compares the means between the groups
+##Analysis of variance 
+##inferences about means are made by analyzing variance
+
+#ANOVA testing if there is a difference between the number of tattoos pirates have based on their favorite sword
+# Create tattoos model
+
+tat.sword.lm <- lm(formula = tattoos ~ sword.type,
+                   data = pirates)
+
+#Get ANOVA table
+anova(tat.sword.lm)
+
+
+#Analysis of Variance Table
+
+#Response: tattoos
+#Df Sum Sq Mean Sq F value    Pr(>F)    
+#sword.type   3 1587.8  529.28  54.106 < 2.2e-16 ***
+#  Residuals  996 9743.1    9.78                      
+#---
+#  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+## the P value is the smallest!
+##there is a significant (positive) relationship between a pirate’s tattoos and swords.
+
+##Residuals difference from the mean
+## One-way ANOVA. A residual is computed for each value. Each residual is the difference between a entered value and the mean of all values for that group. A residual is positive when the corresponding value is greater than the sample mean, and is negative when the value is less than the sample mean.
+## There are 996 pirates in this dataframe, 996 residuals 
+
+
+
+
 

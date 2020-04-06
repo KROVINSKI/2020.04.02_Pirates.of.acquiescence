@@ -68,5 +68,5 @@ model <- lm(formula = weight ~ height,
 
 abline(model, col= 'blue')
 
-
+##LM "lm" Linear Mode. Fitting Linear Models is the tool used above 
 

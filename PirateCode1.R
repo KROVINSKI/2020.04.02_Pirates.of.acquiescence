@@ -73,3 +73,26 @@ abline(model, col= 'blue')
 ## Usage : lm(formula, data, subset, weights, na.action,
 ##           method = "qr", model = TRUE, x = FALSE, y = FALSE, qr = TRUE,
 ##            singular.ok = TRUE, contrasts = NULL, offset, …)
+
+
+##Models for lm are specified symbolically. 
+## A typical model has the form response ~ terms (Notice the tilde!)
+## where response is the (numeric) response vector and 
+## terms is a series of terms which specifies a linear predictor for response. 
+
+## <*))>< in the Pirate example, the response in the number response vector is weight
+## <*))>< the linear predictor for the response is height
+
+## Formula
+## an object of class "formula" ("or one that can be coerced to that class"... one that you can bend into the rsponse and terms relationship)
+## : a symbolic description of the model to be fitted. 
+
+# A*G*A*I*N*
+
+## Usage : lm(formula, data, subset, weights, na.action,
+##           method = "qr", model = TRUE, x = FALSE, y = FALSE, qr = TRUE,
+##            singular.ok = TRUE, contrasts = NULL, offset, …)
+
+##Data : n optional data frame, list or environment (or object coercible by as.data.frame to a data frame) containing the variables in the model. If not found in data, the variables are taken from environment(formula), typically the environment from which lm is called.
+##Subset : an optional vector specifying a subset of observations to be used in the fitting process.
+

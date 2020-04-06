@@ -68,5 +68,8 @@ model <- lm(formula = weight ~ height,
 
 abline(model, col= 'blue')
 
-##LM "lm" Linear Mode. Fitting Linear Models is the tool used above 
-
+##LM "lm" Linear Mode. Fitting Linear Models is the tool used above
+## lm is used to fit linear models. It can be used to carry out regression, single stratum analysis of variance and analysis of covariance (although "aov" may provide a more convenient interface for these).
+## Usage : lm(formula, data, subset, weights, na.action,
+##           method = "qr", model = TRUE, x = FALSE, y = FALSE, qr = TRUE,
+##            singular.ok = TRUE, contrasts = NULL, offset, …)

@@ -202,6 +202,36 @@ anova(tat.sword.lm)
 
 ##regression analysis to see if a pirate’s age, weight, and number of tattoos (s)he has predicts how many treasure chests he/she’s found:
 
+# Create a linear regression model: DV = tchests, IV = age, weight, tattoos
+
+tchests.model <- lm(formula = tchests ~ age + weight + tattoos,
+                   data = pirates)
+
+# Show summary statistics
+summary(tchests.model)
+
+##summary statistics shown
+#Call:
+#lm(formula = tchests ~ age + weight + tattoos, data = pirates)
+
+#Residuals:
+#  Min      1Q  Median      3Q     Max 
+#-33.302 -15.832  -6.860   8.407 119.966 
+
+#Coefficients:
+#  Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)  5.19084    7.18437   0.723     0.47    
+# age          0.78177    0.13438   5.818 8.03e-09 ***
+#  weight      -0.09013    0.07183  -1.255     0.21    
+#tattoos      0.25398    0.22550   1.126     0.26    
+---
+#  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+# Residual standard error: 23.99 on 996 degrees of freedom
+# Multiple R-squared:  0.04056,	Adjusted R-squared:  0.03767 
+# F-statistic: 14.04 on 3 and 996 DF,  p-value: 5.751e-09
+
+#p values 0.47, 8.03e-09, .21, and .26 ...AGE is the SIGNIF PREDICTOR OF TREASURE
 
 
 

@@ -234,4 +234,6 @@ summary(tchests.model)
 #p values 0.47, 8.03e-09, .21, and .26 ...AGE is the SIGNIF PREDICTOR OF TREASURE
 
 
+## B*A*Y*E*S*I*A*N*  
+##Bayesian versions  
 

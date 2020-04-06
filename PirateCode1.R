@@ -200,6 +200,7 @@ anova(tat.sword.lm)
 ## One-way ANOVA. A residual is computed for each value. Each residual is the difference between a entered value and the mean of all values for that group. A residual is positive when the corresponding value is greater than the sample mean, and is negative when the value is less than the sample mean.
 ## There are 996 pirates in this dataframe, 996 residuals 
 
+##regression analysis to see if a pirate’s age, weight, and number of tattoos (s)he has predicts how many treasure chests he/she’s found:
 
 
 

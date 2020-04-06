@@ -22,4 +22,4 @@ mean(c(22557, 4520, 2))
 #mean(c(22557, 4520. 2))
 ##error you should see Error: unexpected numeric constant in "mean(c(22557, 4520. 2"
 
-
+  

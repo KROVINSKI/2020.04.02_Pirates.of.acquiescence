@@ -237,3 +237,8 @@ summary(tchests.model)
 ## B*A*Y*E*S*I*A*N*  
 ##Bayesian versions  
 
+# Install and load the BayesFactor package
+
+install.packages('BayesFactor')
+library(BayesFactor)
+

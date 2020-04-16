@@ -242,5 +242,21 @@ summary(tchests.model)
 #library(BayesFactor)
 
 # Bayesian t-test comparing the age of pirates with and without headbands
+
 ttestBF(formula = age ~ headband,
         data = pirates)
+
+##results should be 
+#Bayes factor analysis
+#--------------
+#  [1] Alt., r=0.707 : 0.1187807 ±0%
+
+#Against denominator:
+#  Null, mu1-mu2 = 0 
+#---
+#  Bayes factor type: BFindepSample, JZS
+# Bayes factor = 0.12 which is strong evidence for the null hypothesis (that the mean age does not differ between pirates with and without headbands
+
+
+
+

@@ -1,11 +1,11 @@
 ##installing the yarr package and continuing with tutorial
 
-install.packages('yarrr')
-
+#*********************************
+##Libraries
+#*********************************
 library(yarrr)
 library(yarr)
-??pirates 
-?pirates
+library(BayesFactor)
 
 ##I want to see first rows of the dataframe here...
 
@@ -233,12 +233,14 @@ summary(tchests.model)
 
 #p values 0.47, 8.03e-09, .21, and .26 ...AGE is the SIGNIF PREDICTOR OF TREASURE
 
-
-## B*A*Y*E*S*I*A*N*  
+#*********************************
+## 3.6 Bayesian Statistics
+#*********************************
 ##Bayesian versions  
-
 # Install and load the BayesFactor package
+#install.packages('BayesFactor')
+#library(BayesFactor)
 
-install.packages('BayesFactor')
-library(BayesFactor)
-
+# Bayesian t-test comparing the age of pirates with and without headbands
+ttestBF(formula = age ~ headband,
+        data = pirates)

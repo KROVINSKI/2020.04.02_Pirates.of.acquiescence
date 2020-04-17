@@ -58,6 +58,16 @@ e <- "cannon"
 f <- "Do any modern armies still use cannons?"
 
 
+#*********************************
+## 5.2 Scalars 
+#*********************************
+
+# A vector object is a combination of several scalars stored as a single object
+
+# there are many ways to create a vector, many way to use a function to create a vector
+# methods we will cover in this chapter:
+
+# c(a, b, ...)  conc
 
 
 
@@ -66,3 +76,10 @@ f <- "Do any modern armies still use cannons?"
 
 
 
+
+
+
+
+#*********************************
+## End of Script | End of Document
+#*********************************

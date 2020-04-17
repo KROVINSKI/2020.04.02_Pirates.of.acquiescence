@@ -132,9 +132,82 @@ mean(tattoos)
 
 
 
+#*********************************
+## 4.4 Objects - Numeric and Characters 
+#*********************************
+
+# Character objects- need quotations around them
+# certain functions are only meant for either numeric or character type objects
+
+
+#* * * * * * * * * * * * * * * * *
+## 4.4a Objects - Assignment  
+#* * * * * * * * * * * * * * * * *
+
+
+# using <- to make assigments
+a <- 100
+print(a)
+#results
+# > print(a)
+# [1] 100
 
 
 
+a<- 1
+b<- 100
+a + b
+#Results view from Console
+#> a<- 1
+#> b<- 100
+#> a + b
+# [1] 101
+
+c <- a + b 
+print(c)
+
+#* * * * * * * * * * * * * * * * *
+## 4.4a Objects - Assignment Names
+#* * * * * * * * * * * * * * * * *
+
+# Object Names
+# Valid object names
+group.mean <- 10.21
+my.age <- 32
+FavoritePirate <- "Jack Sparrow"
+sum.1.to.5 <- 1 + 2 + 3 + 4 + 5
+
+#case sensitive
+# These are all different objects
+Plunder <- 1
+plunder <- 100
+PLUNDER <- 5
+
+blackpearl.usd <- 634954103
+
+# Create a new object called blackpearl.eur 
+# blackpearl.eur converts our original value to Euros 
+# assumption -  1 USD = 0.88 EUR 
+blackpearl.eur <- blackpearl.usd * 0.88
+blackpearl.eur
+
+#result
+# [1] 558759611
+
+#Creating an object for Deadman's chest gross movie sales
+deadman.usd <- 1066215812
+# How much did the sequel make compared to the original? divide deadman.usd by blackpearl.usd
+deadman.usd / blackpearl.usd
+#Result
+#1] 1.679201
+
+gold.in.2015 <- 101600
+
+plank.list <- "Skippy McGee"
 
 
+
+#*********************************
+## End of Script | End of Document
+#*********************************
 

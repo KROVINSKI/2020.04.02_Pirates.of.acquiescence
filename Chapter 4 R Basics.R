@@ -204,7 +204,7 @@ deadman.usd / blackpearl.usd
 gold.in.2015 <- 101600
 
 plank.list <- "Skippy McGee"
-
+print(plank.list)
 
 
 #*********************************

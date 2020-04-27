@@ -180,6 +180,84 @@ rep(x = 1:3, each = 2, times = 2)
 # 5.3.1 sample() function 
 # _ _ _ _ _ _ _ _ _ _ _ 
 
+# Sample() function has 4 agruments
+# 
+# x =           | A vector of outcomes you want to sample from. For example, to simulate coin flips, you’d enter x = c("H", "T")
+# size =        | The number of samples you want to draw. The default is the length of x
+# replace =     | Should sampling be done with replacement? If FALSE (the default value), then each outcome in x can only be drawn once. If TRUE, then each outcome in x can be drawn multiple times.
+# prob =        | A vector of probabilities of the same length as x indicating how likely each outcome in x is. The vector of probabilities you give as an argument should add up to one. If you don’t specify the prob argument, all outcomes will be equally likely.
+
+# The sample() function allows you to draw random samples of elements (scalars) from a vector. 
+
+
+# From the integers 1:10, draw 5 numbers
+
+sample(x=1:10, size = 5)
+# [1] 8 7 5 9 2
+
+
+# 5.3.2 Normal Distribution 
+# _ _ _ _ _ _ _ _ _ _ _ 
+
+#  " rnorm " is the function in R used to create normal distribute curves
+# The Normal distribution is bell-shaped, and has two parameters: 
+#                                                           a mean & 
+#                                                           a standard deviation
+
+# nrom has three different agruments
+# nrom()
+# n =                     | The number of observations to draw from the distribution.
+# mean =                  | The mean of the distribution
+# stnd distribution =     | The standard deviation of the distribution
+
+# using different scalars to show relationships
+
+# 5 samples from a Normal dist with mean = 0, sd = 1
+rnorm(n = 5, mean = 0, sd = 1)
+## [1] -0.0046 -0.0016  1.2226  1.2509  1.8195
+
+rnorm(n = 10, mean = 0, sd = 2)
+## [1]  2.6702621  1.1555031 -1.1107844  2.9724793  2.5169163  0.7927735  2.0195098  4.6466513
+## [9]  3.3934326  1.9997869
+
+
+# 3 samples from a Normal dist with mean = -10, sd = 15
+rnorm(n = 3, mean = -10, sd = 15)
+## [1] -10.67   0.61 -25.94
+
+
+# 5.3.3 Uniform Distribution 
+# _ _ _ _ _ _ _ _ _ _ _ 
+
+
+# The Uniform distribution gives equal probability to all values between its minimum and maximum values. 
+# Everything between its lower and upper bounds are equally likely to occur. 
+
+# function used for uniform distribution runif()
+# three arguments 
+# runif()
+# n =       | The number of observations to draw from the distribution
+# min =     | The lower bound of the Uniform distribution from which samples are drawn
+# max =     | The upper bound of the Uniform distribution from which samples are drawn
+
+
+runif(n = 5, min = 0, max = 1)
+## [1] 0.0019 0.8019 0.1661 0.3628 0.9268
+
+# 10 samples from Uniform dist with bounds at -100 and +100
+runif(n = 10, min = -100, max = 100)
+##  [1] -10.8 -37.7   2.2 -38.4 -34.6  46.2 -68.8   5.3  92.9 -14.4
+
+
+
+
+# 5.3.4 Distributions and Random Samples 
+# _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+
+
 
 
 

@@ -254,6 +254,58 @@ runif(n = 10, min = -100, max = 100)
 # 5.3.4 Distributions and Random Samples 
 # _ _ _ _ _ _ _ _ _ _ _ 
 
+# using set.seed() function to place some limits on random sampling
+# Fix sampling seed to 100, so the next sampling functions
+#   always produce the same values
+set.seed(100)
+
+# The result will always be -0.5022, 0.1315, -0.0789
+rnorm(3, mean = 0, sd = 1)
+## [1] -0.502  0.132 -0.079
+
+# The result will always be 0.887, 0.117, 0.319
+rnorm(3, mean = 0, sd = 1)
+## [1] 0.89 0.12 0.32
+
+#5.4 Test your R might!
+# Create the vector [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] in three ways: once using c(), once using a:b, and once using seq().
+
+vctr.a <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+vctr.a
+vctr.b <- 1:10
+vctr.b
+vctr.c <- seq(1:10)
+vctr.c
+
+
+# Create the vector [2.1, 4.1, 6.1, 8.1] in two ways, once using c() and once using seq()
+
+vctr.d <- c(2.1, 4.1, 6.1, 8.1)
+vctr.d
+
+vctr.e <- seq(from = 2.1, to = 8.1, by=2)
+vctr.e
+
+# Create the vector [0, 5, 10, 15] in 3 ways: using c(), seq() with a by argument, and seq() with a length.out argument.
+vctr.f <- c(0, 5, 10, 15)
+vctr.f
+vctr.g <- seq(from = 0, to=15, by=5)
+vctr.g
+vctr.h <- seq(from=0, by=5, length.out = 4)
+vctr.h 
+
+# Create the vector [101, 102, 103, 200, 205, 210, 1000, 1100, 1200] using a combination of the c() and seq() functions
+
+
+# A new batch of 100 pirates are boarding your ship and need new swords. You have 10 scimitars, 40 broadswords, and 50 cutlasses that you need to distribute evenly to the 100 pirates as they board. Create a vector of length 100 where there is 1 scimitar, 4 broadswords, and 5 cutlasses in each group of 10. That is, in the first 10 elements there should be exactly 1 scimitar, 4 broadswords and 5 cutlasses. The next 10 elements should also have the same number of each sword (and so on).
+
+# Create a vector that repeats the integers from 1 to 5, 10 times. That is [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, …]. The length of the vector should be 50!
+  
+# Now, create the same vector as before, but this time repeat 1, 10 times, then 2, 10 times, etc., That is [1, 1, 1, …, 2, 2, 2, …, … 5, 5, 5]. The length of the vector should also be 50
+
+Create a vector containing 50 samples from a Normal distribution with a population mean of 20 and standard deviation of 2.
+
+Create a vector containing 25 samples from a Uniform distribution with a lower bound of -100 and an upper bound of -50.
 
 
 

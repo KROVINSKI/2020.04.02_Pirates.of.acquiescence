@@ -294,18 +294,72 @@ vctr.g
 vctr.h <- seq(from=0, by=5, length.out = 4)
 vctr.h 
 
-# Create the vector [101, 102, 103, 200, 205, 210, 1000, 1100, 1200] using a combination of the c() and seq() functions
+# Create the vector [101, 102, 103, 200, 205, 210, 1000, 1100, 1200] 
+#                 using a combination of the c() and seq() functions
+vctr.i <- c(101, 102, 103, 200, 205, 210, 1000, 1100, 1200)
+vctr.i
 
 
-# A new batch of 100 pirates are boarding your ship and need new swords. You have 10 scimitars, 40 broadswords, and 50 cutlasses that you need to distribute evenly to the 100 pirates as they board. Create a vector of length 100 where there is 1 scimitar, 4 broadswords, and 5 cutlasses in each group of 10. That is, in the first 10 elements there should be exactly 1 scimitar, 4 broadswords and 5 cutlasses. The next 10 elements should also have the same number of each sword (and so on).
+# 5.2.2 seq() function
+# _ _ _ _ _ _ _ _ _ _ _ 
+# the seq() function needs three agruments from=, to=, and by= 
+# fourth arguement*(used instead of by) of the function is optional length.out
 
-# Create a vector that repeats the integers from 1 to 5, 10 times. That is [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, …]. The length of the vector should be 50!
+# from =        | The start of the sequence
+# to =          | The end of the sequence
+# by =          | the step size of the sequence
+# length.out =  | The desired length of the final sequence (only use if you don’t specify by)
+
+vctr.j <- seq(101:103, (from = 200, to=210, by= 5), (from = 1000, to = 1200, by = 100))
+vctr.j
+
+# A new batch of 100 pirates are boarding your ship and need new swords. 
+# You have 10 scimitars, 40 broadswords, and 50 cutlasses 
+#       you need to distribute evenly to the 100 pirates as they board. 
+#       Create a vector of length 100 where there is 
+#                                 1 scimitar, 
+#                                 4 broadswords, and 
+#                                 5 cutlasses in each group of 10. 
+# That is, in the first 10 elements there should be exactly 1 scimitar, 4 broadswords and 5 cutlasses. 
+#The next 10 elements should also have the same number of each sword (and so on).
+
+newswords <- rep(x = c("scimitar",
+                rep("broadsword", times = 4),
+                rep("cutlass", times = 5)),
+                 times = 10)
+
+
+
+# Create a vector that repeats the integers from 1 to 5, 10 times. 
+#That is [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, …]. The length of the vector should be 50!
+vctr.k <- rep(1:5, times= 10)
+vctr.k
+
+
   
-# Now, create the same vector as before, but this time repeat 1, 10 times, then 2, 10 times, etc., That is [1, 1, 1, …, 2, 2, 2, …, … 5, 5, 5]. The length of the vector should also be 50
+# Now, create the same vector as before, but this time repeat 1, 10 times, 
+#                                                     then 2, 10 times, etc., 
+#                                 That is [1, 1, 1, …, 2, 2, 2, …, … 5, 5, 5]. 
+#                                   The length of the vector should also be 50
 
-Create a vector containing 50 samples from a Normal distribution with a population mean of 20 and standard deviation of 2.
+vctr.l <- rep(1:5, times= 10, each=3, length=50)
+vctr.l
 
-Create a vector containing 25 samples from a Uniform distribution with a lower bound of -100 and an upper bound of -50.
+
+
+#Create a vector containing 50 samples from a Normal distribution 
+# with a population mean of 20 and standard deviation of 2.
+
+
+# nrom()
+# n =                     | The number of observations to draw from the distribution.
+# mean =                  | The mean of the distribution
+# stnd distribution =     | The standard deviation of the distribution
+
+# vctr.m <- nrom( n= 50, mean=20, sd= 2)
+
+#Create a vector containing 25 samples from a Uniform distribution 
+# with a lower bound of -100 and an upper bound of -50.
 
 
 

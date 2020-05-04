@@ -19,7 +19,7 @@ head(pirates)
 
 
 #*********************************
-##1. Calculate summary statistics
+##6.0 Calculating summary statistics
 #*********************************
 
 # 10 students from two different classes took two exams.
@@ -40,6 +40,185 @@ midterm
 # Difference between final and midterm scores
 final - midterm
 ##  [1] 11 -1 17 -2  0 16 -2 -8  0 16
+
+
+# Each student's average score
+(midterm + final) / 2
+##  [1] 72 72 88 83 60 75 93 77 50 80
+
+# Mean midterm grade
+mean(midterm)
+## [1] 73
+
+# Standard deviation of midterm grades
+sd(midterm)
+## [1] 13
+
+# Highest final grade
+max(final)
+## [1] 97
+
+# z-scores
+midterm.z <- (midterm - mean(midterm)) / sd(midterm)
+final.z <- (final - mean(final)) / sd(final)
+
+
+
+#*********************************
+##6.1 Arithmetic operations on vectors
+#*********************************
+
+#establishing vectors:
+a <- c(1, 2, 3, 4, 5)
+b <- c(10, 20, 30, 40, 50)
+
+a + 100
+## [1] 101 102 103 104 105
+a + b
+## [1] 11 22 33 44 55
+(a + b) / 10
+## [1] 1.1 2.2 3.3 4.4 5.5
+
+
+## Operations on a scalar in a vector
+# If you do an operation on a vector with a scalar, 
+# R will apply the scalar to each element in the vector. 
+
+
+# Take the integers from 1 to 10, then add 100 to each
+1:10 + 100
+##  [1] 101 102 103 104 105 106 107 108 109 110
+
+
+# Different types of arthmetic 
+a <- 1:10
+a / 100
+##  [1] 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09 0.10
+a ^ 2
+##  [1]   1   4   9  16  25  36  49  64  81 100
+
+
+
+#*********************************
+##6.1.1 Basic math with multiple vectors
+#*********************************
+
+
+# Vectors of the same length
+c(1, 2, 3, 4, 5) + c(5, 4, 3, 2, 1)
+## [1] 6 6 6 6 6
+
+
+#Vectors of the same length will make for easy products of those vectors
+a <- 1:5
+b <- 1:5
+
+ab.sum <- a + b
+ab.diff <- a - b
+ab.prod <- a * b
+
+ab.sum
+## [1]  2  4  6  8 10
+ab.diff
+## [1] 0 0 0 0 0
+ab.prod
+## [1]  1  4  9 16 25
+
+
+#*``*``*``*``*``*``*``*``*``*``*``
+## Example
+## Pirate Bake Sale
+#*``*``*``*``*``*``*``*``*``*``*``
+
+
+pies <- c(3, 6, 2, 10, 4)
+cookies <- c(70, 40, 40, 200, 60)
+
+# calculate the total number sold
+total.sold <- pies + cookies
+total.sold
+## [1]  73  46  42 210  64
+
+
+#*********************************
+##6.2 Summary Statistics
+#*********************************
+
+ # functions that apply to continuous data
+ # Continuous data = data that can take on an infinite number of values
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` 
+# Table 6.1: Summary statistic functions for continuous data.               |
+# Function	                Example	                    Result              |
+#                                                                           |
+# sum(x), product(x)        sum(1:10)                   55                  |
+#                                                                           |
+# min(x), max(x)            min(1:10)                   1                   |
+#                                                                           |
+# mean(x), median(x)        mean(1:10)                  5.5                 |
+#                                                                           |
+# sd(x), var(x),            sd(1:10)                    3.03                |
+# range(x)                                                                  |
+#                                                                           |
+# quantile(x, probs)        quantile(1:10, probs = .2)  2.8                 |
+#                                                                           |
+# summary(x)                summary(1:10)               Min = 1.00.         |
+#                                                       1st Qu. = 3.25,     |
+#                                                       Median = 5.50,      |
+#                                                       Mean = 5.50,        |
+#                                                       3rd Qu. = 7.75,     |
+#                                                       Max = 10.0          |
+#                                                                           |
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+
+
+# Descriptive statistics from some pirate related data.
+
+tattoos <- c(4, 50, 2, 39, 4, 20, 4, 8, 10, 100)
+min(tattoos)
+## [1] 2
+mean(tattoos)
+## [1] 24
+sd(tattoos)
+## [1] 31
+
+
+
+#*********************************
+##6.2.1 Length Function
+#*********************************
+#  length() ``````````````````````````````````````````````````  |
+#  Vectors have one dimension: their length                     |
+#  Joining/Combining Vectors & Higher Dimensional objects:      |
+#                                                 matrices      |
+#                                                 dataframes    |
+#  Ensure : all the vectors (you combine) have the same length  |
+# ``````````````````````````````````````````````````````````````
+
+
+a <- 1:10
+length(a)  # How many elements are in a?
+## [1] 10
+
+b <- seq(from = 1, to = 100, length.out = 20)
+length(b)  # How many elements are in b?
+## [1] 20
+
+length(c("This", "character", "vector", "has", "six", "elements."))
+## [1] 6
+
+length("This character scalar has just one element.")
+## [1] 1
+
+
+
+
+
+
+
+
+
+
 
 
 

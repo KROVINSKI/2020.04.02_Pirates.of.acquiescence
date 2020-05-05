@@ -213,12 +213,123 @@ length("This character scalar has just one element.")
 
 
 
+#*********************************
+##6.2.2 Additional numeric vector functions
+#*********************************
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` 
+#         Table 6.2: Vector summary functions for continuous data.                  |
+# Function	        Description	              Example	                 Result       |
+#                                                                                   |
+# round(x,          Round elements in x to    round(c(2.231, 3.1415), 2.2, 3.1      |
+# digits)           digits digits             digits = 1)                           |
+#                                                                                   |                  
+round(c(2.231, 3.1415), digits =1)
+# [1] 2.2 3.1                                                                       |
+#                                                                                   |
+# ceiling(x),       Round elements x          ceiling(c(5.1, 7.9))    6, 8          |
+# floor(x)          to the next highest                                             |
+#                   (or lowest) integer                                             |
+
+ceiling(c(5.1, 7.9))                                                                
+# [1] 6 8                                                                           |
+floor(c(5.1, 7.9))    
+# [1] 5 7                                                                           |
+
+# x %% y            Modular arithmetic (ie.   7 %% 3                  1             |
+#                   x mod y)                                                        |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+
+
+#*********************************
+##6.2.3 Sample statistics from random samples
+#*********************************
+
+#  R draws random samples using the rnorm() and runif() functions
+#  R Random Sampling
+#  Functions
+#       rnorm()
+#       runif()
+
+#  Calculate summary statistics 
+#  Functions 
+#       mean()
+#       sd()
+
+
+
+# 5 samples from a Normal dist with mean = 10 and sd = 5
+x <- rnorm(n = 5, mean = 10, sd = 5)
+
+# What are the mean and standard deviation of the sample?
+mean(x)
+
+sd(x)
+
+
+# 100,000 samples from a Normal dist with mean = 10, sd = 5
+y <- rnorm(n = 100000, mean = 10, sd = 5)
+
+mean(y)
+## [1] 10
+sd(y)
+## [1] 5
+
+
+
+
+#*********************************
+## 6.3 Counting statistics
+#*********************************
+# Common counting functions
+#                 of discrete 
+#                 of non-numeric data
+
+# Following arguments to these functions can be either numeric or character
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` 
+#                 Table 6.3: Counting functions for discrete data.                  |
+#                                                                                   |
+# Function	        Description	            Example	                Result          |
+# unique(x)         Returns a vector                                                |
+#                   of all unique values.   unique(c(1, 1, 2, 10))  1, 2, 10        |
+#
+# table             Returns a table         table(c("a",            2-"a",          |
+#   (x, exclude)    showing all the unique        "a", "b", "c"))     1-"b",        |
+#                   values as well as a                                 1-"c"       |  
+#                   count of                                                        |
+#                   each occurrence.                                                |
+#                   To include                                                      |
+#                   a count of NA values,                                           |
+#                   include the argument                                            |
+#                   exclude = NULL                                                  |
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 
 
 
 
 
 
+
+
+
+#
+# 
+
+
+
+
+
+# 
+# 
+#             
+# 
+# 
+# 
+#             
+# 
+# 
+# 
 
 
 

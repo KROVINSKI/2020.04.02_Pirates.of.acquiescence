@@ -372,6 +372,26 @@ mean(a, na.rm = TRUE)
 
 
 
+
+
+#*********************************
+## 6.5 Standardization (z-score)
+#*********************************
+
+# Standardize Variables – also known as calculating z-scores
+
+# Standardizing a vector - put vector on a common scale 
+#                         Can then compare it to other (standardized) variable
+
+# To standardize a vector - (1) subtract the vector by its mean
+#                           (2) divide the result by the vector’s standard deviation
+
+
+
+
+
+
+
 # 
 # 
 #             

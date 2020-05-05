@@ -306,17 +306,69 @@ sd(y)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 
 
+# testing two vectors of discrete data: 
+
+vec <- c(1, 1, 1, 5, 1, 1, 10, 10, 10)
+gender <- c("M", "M", "F", "F", "F", "M", "F", "M", "F")
+
+
+# *U*N*I*Q*U*E* 
+# unique(x) functions 
+# unique - shows unique values in the vector, 
+#       unique function limitations : No indication of how often each value occurs.
+
+# Examples:
+unique(vec)
+## [1]  1  5 10
+unique(gender)
+## [1] "M" "F"
 
 
 
+# *T*A*B*L*E*
+#  table() similar function as unique
+#  table() shows unique valves & frequency of the unique values occurs
 
+# Examples:
+table(vec)
+## vec
+##  1  5 10 
+##  5  1  3
+table(gender)
+## gender
+## F M 
+## 5 4
 
+# table of percentages instead of counts
+table(vec) / sum(table(vec))
+# vec
+# 1         5        10 
+# 0.5555556 0.1111111 0.3333333 
 
+table(gender) / sum(table(gender))
+# gender
+# F         M 
+# 0.5555556 0.4444444 
 
 #
 # 
 
 
+#*********************************
+## 6.4 Missing (NA) values
+#*********************************
+
+# Descriptive statistics need NA values dealt with prior to preforming arguments 
+a <- c(1, 5, NA, 2, 10)
+mean(a)
+## [1] NA
+
+
+# descriptive statistic functions need to be told to ignore NA values
+#             include the argument na.rm = TRUE in the function
+
+mean(a, na.rm = TRUE)
+#[1] 4.5
 
 
 

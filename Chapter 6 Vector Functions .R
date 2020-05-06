@@ -386,9 +386,25 @@ mean(a, na.rm = TRUE)
 # To standardize a vector - (1) subtract the vector by its mean
 #                           (2) divide the result by the vector’s standard deviation
 
+# Create the vector
+# Get the mean
+# Create the standard deviation
+
+a <- c(5, 3, 7, 5, 5, 3, 4)
+mean(a)
+## [1] 4.6
+sd(a)
+## [1] 1.4
 
 
+a.z <- (a - mean(a)) / sd(a)
 
+a.z
+
+mean(a.z)
+## [1] 2e-16
+sd(a.z)
+## [1] 1
 
 
 
